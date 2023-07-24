@@ -298,8 +298,7 @@
                         slideToClickedSlide: true,
                         loop: true,
                         mousewheel: true,
-                        initialSlide: 4,
-                        loopedSlides: 10,
+                        initialSlide: 2,
                         speed: 500,
                         navigation: {
                             prevEl: specialitiesContainer.querySelector('.swiper-button-prev'),
@@ -318,12 +317,13 @@
                             1900: {
                                 spaceBetween: 64
                             }
-                        },
-                        autoplay: {
-                            delay: 3000
                         }
+                        // autoplay: {
+                        //   delay: 3000,
+                        // },
                     });
                 }
+
                 if (!aboutSlider) {
                     aboutSlider = new Swiper(about, {
                         loop: true,
@@ -483,6 +483,7 @@
             new Swiper(faces, {
                 speed: 400,
                 slidesPerView: 'auto',
+                lazy: true,
                 navigation: {
                     prevEl: facesContainer.querySelector('.swiper-button-prev'),
                     nextEl: facesContainer.querySelector('.swiper-button-next')

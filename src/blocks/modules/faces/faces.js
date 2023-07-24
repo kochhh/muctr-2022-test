@@ -11,6 +11,7 @@ const Faces = {
     new Swiper(faces, {
       speed: 400,
       slidesPerView: 'auto',
+      lazy: true,
       navigation: {
         prevEl: facesContainer.querySelector('.swiper-button-prev'),
         nextEl: facesContainer.querySelector('.swiper-button-next'),

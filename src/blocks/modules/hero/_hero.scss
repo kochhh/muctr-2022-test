@@ -151,7 +151,7 @@ html:not(.fonts-loaded) .section--hero {
 .hero-object {
   left: 50%;
   position: absolute;
-  top: 505px;
+  top: 510px;
   transform: translateX(-131%);
   width: 235px;
 
@@ -242,7 +242,7 @@ html:not(.fonts-loaded) .section--hero {
   position: relative;
 
   @include media-breakpoint-down(md) {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     padding-right: 60px;
   }
 

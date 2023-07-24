@@ -64,7 +64,7 @@ const paths = {
       './src/js/vendor/modernizr.min.js', // 4
       './src/js/vendor/phoneinput.js', // 3
       './bootstrap/dist/js/bootstrap.bundle.min.js', // 59
-      './swiper/dist/swiper-bundle.js', // 104
+      './swiper/dist/swiper-bundle.min.js', // 104
       './node_modules/glightbox/dist/js/glightbox.min.js', // 56
       './node_modules/lazysizes/lazysizes.min.js', // 8
       './node_modules/gsap/dist/gsap.min.js', // 72
