@@ -1,0 +1,243 @@
+section.section.section--calc#calc
+  .section-background.calc-background
+    picture
+      source(data-srcset="i/calc/calc-bg-xxl.avif" media="(min-width: 1900px)" type="image/avif")
+      source(data-srcset="i/calc/calc-bg-xxl.webp" media="(min-width: 1900px)" type="image/webp")
+      source(data-srcset="i/calc/calc-bg-xxl.jpg" media="(min-width: 1900px)" type="image/jpeg")
+      source(data-srcset="i/calc/calc-bg-xl.avif" media="(min-width: 1440px)" type="image/avif")
+      source(data-srcset="i/calc/calc-bg-xl.webp" media="(min-width: 1440px)" type="image/webp")
+      source(data-srcset="i/calc/calc-bg-xl.jpg" media="(min-width: 1440px)" type="image/jpeg")
+      source(data-srcset="i/calc/calc-bg-lg.avif" media="(min-width: 768px)" type="image/avif")
+      source(data-srcset="i/calc/calc-bg-lg.webp" media="(min-width: 768px)" type="image/webp")
+      source(data-srcset="i/calc/calc-bg-lg.jpg" media="(min-width: 768px)" type="image/jpeg")
+      source(data-srcset="i/calc/calc-bg-sm.avif" type="image/avif")
+      source(data-srcset="i/calc/calc-bg-sm.webp" type="image/webp")
+      source(data-srcset="i/calc/calc-bg-sm.jpg" type="image/jpeg")
+      img.lazyload(data-src="i/calc/calc-bg-sm.jpg" width="501" height="473" alt="" aria-hidden="true")
+  .calc-object
+    picture
+      source(data-srcset="i/calc/calc-object-xxl.avif" media="(min-width: 1900px)" type="image/avif")
+      source(data-srcset="i/calc/calc-object-xxl.webp" media="(min-width: 1900px)" type="image/webp")
+      source(data-srcset="i/calc/calc-object-xxl.png" media="(min-width: 1900px)" type="image/png")
+      source(data-srcset="i/calc/calc-object-xl.avif" media="(min-width: 1440px)" type="image/avif")
+      source(data-srcset="i/calc/calc-object-xl.webp" media="(min-width: 1440px)" type="image/webp")
+      source(data-srcset="i/calc/calc-object-xl.png" media="(min-width: 1440px)" type="image/png")
+      source(data-srcset="i/calc/calc-object-lg.avif" media="(min-width: 768px)" type="image/avif")
+      source(data-srcset="i/calc/calc-object-lg.webp" media="(min-width: 768px)" type="image/webp")
+      source(data-srcset="i/calc/calc-object-lg.png" media="(min-width: 768px)" type="image/png")
+      source(data-srcset="i/calc/calc-object-sm.avif" type="image/avif")
+      source(data-srcset="i/calc/calc-object-sm.webp" type="image/webp")
+      source(data-srcset="i/calc/calc-object-sm.png" type="image/png")
+      img.lazyload(data-src="i/calc/calc-object-sm.png" width="577" height="464" alt="" aria-hidden="true" data-animation="fade-in-left")
+  .container
+    .calc-container(data-animation="fade-in-right")
+      h2.calc-title.title.section-title(title="Что скоро будет всё сбываться") Есть миллионы шансов
+      .calc-body.section-text
+        p Воспользуйся нашим #[strong.text-primary калькулятором ЕГЭ], чтобы оценить свои силы в&nbsp;конкурсе на&nbsp;выбранную специальность
+        br
+        p Обрати внимание, что это данные 2021&nbsp;года. Возможно, в&nbsp;этом году твоё будущее ещё ближе!
+      form(novalidate)
+        ul.calc-subjects
+          li.calc-subjects-item
+            .calc-subjects-item__name
+              span.title Математика
+            .calc-subjects-item__field
+              input.form-control(type="text" inputmode="numeric" placeholder="0" maxlength="3" aria-label="Математика")
+          li.calc-subjects-item
+            .calc-subjects-item__name
+              span.title Химия
+            .calc-subjects-item__field
+              input.form-control(type="text" inputmode="numeric" placeholder="0" maxlength="3" aria-label="Химия")
+            .calc-subjects-item__action
+              button.btn-close(type="button" aria-label="Удалить")
+          li.calc-subjects-item
+            .calc-subjects-item__name
+              span.title Информатика и&nbsp;ИКТ
+            .calc-subjects-item__field
+              input.form-control(type="text" inputmode="numeric" placeholder="0" maxlength="3" aria-label="Информатика и ИКТ")
+            .calc-subjects-item__action
+              button.btn-close(type="button" aria-label="Удалить")
+        .calc-add.dropdown
+          button.btn.btn-add-subject.dropdown-toggle(type="button" id="addSubjectDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,16") + добавить предмет
+          ul.dropdown-menu.calc-add-list(aria-labelledby="addSubjectDropdown")
+            each item, index in ["Добавить все", "Русский язык", "Химия", "Физика", "Информатика и ИКТ", "Биология", "География", "Иностранный язык", "Обществознание", "История"]
+              li.calc-add-item
+                a.calc-add-item__link(href="#" class=(index === 0 ? "text-primary" : ""))= item
+        .calc-max
+          .calc-subjects-item
+            .calc-subjects-item__name
+              span.title Ваш #[span.d-md-none макс.]#[span.d-none.d-md-inline максимальный] балл
+            .calc-subjects-item__field
+              input.form-control(type="text" inputmode="numeric" placeholder="0" maxlength="3" aria-label="Ваш максимальный балл")
+        .calc-submit
+          button.btn.btn-default.btn-secondary(type="button" data-bs-toggle="modal" data-bs-target="#modalNotFound") Мне повезёт!
+    .preloader-container
+      .preloader
+    .calc-results-section
+      .calc-results-header
+        .calc-results-summary.title.text-secondary Высокие шансы. Проходишь#[br.d-md-none] по данным 2021 года.
+        .calc-results-legend
+          .calc-results-legend-item
+            span.calc-results-legend-item__icon.bg-primary
+            span.calc-results-legend-item__text обязательный
+          .calc-results-legend-item
+            span.calc-results-legend-item__icon.bg-secondary
+            span.calc-results-legend-item__text на выбор
+      .table-responsive.calc-results-container
+        table.table.calc-results
+          thead
+            tr
+              th Код
+              th Направление&nbsp;/ специальность
+              th Проходной&nbsp;балл 2021
+              th Вступительные испытания и&nbsp;минимальный балл
+          tbody
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 190
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title иностранный язык
+                    strong.score.bg-secondary 65
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 65
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 165
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title русский язык
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 65
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 130
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title русский язык
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 90
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 167
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title русский язык
+                    strong.score.bg-primary 30
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 42
+    .calc-results-section
+      .calc-results-header
+        .calc-results-summary.title.text-primary Невысокие шансы. Не проходишь#[br.d-md-none] по данным 2021 года.
+        .calc-results-legend.d-md-none
+          .calc-results-legend-item
+            span.calc-results-legend-item__icon.bg-primary
+            span.calc-results-legend-item__text обязательный
+          .calc-results-legend-item
+            span.calc-results-legend-item__icon.bg-secondary
+            span.calc-results-legend-item__text на выбор
+      .table-responsive.calc-results-container
+        table.table.calc-results
+          thead
+            tr
+              th Код
+              th Направление&nbsp;/ специальность
+              th Проходной&nbsp;балл 2021
+              th Вступительные испытания и&nbsp;минимальный балл
+          tbody
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 190
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title иностранный язык
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 65
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 165
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title русский язык
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 65
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 130
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title русский язык
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 90
+            tr
+              td 04.05.01
+              td Фундаментальная и прикладная химия
+              td.text-center
+                strong.score.score--lg.bg-primary 167
+              td
+                ul.calc-tests
+                  li.calc-tests-item
+                    span.title русский язык
+                    strong.score.bg-primary 30
+                  li.calc-tests-item
+                    span.title математика
+                    strong.score.bg-primary 65
+                  li.calc-tests-item
+                    span.title химия
+                    strong.score.bg-primary 42
+    .calc-button.text-center
+      a.btn.btn-round-secondary(href="#") #[span.btn-circle] Поступить #[span.arrow #[+icon("arrow")]]

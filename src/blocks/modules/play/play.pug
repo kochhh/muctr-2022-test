@@ -1,0 +1,23 @@
+section.section.section--play#play
+  .section-background.play-background.d-none.d-xl-block
+    picture
+      source(data-srcset="i/play/play-bg.avif" type="image/avif")
+      source(data-srcset="i/play/play-bg.webp" type="image/webp")
+      img.lazyload(data-src="i/play/play-bg.jpg" alt="" aria-hidden="true")
+  .container
+    .play-container
+      .play-content
+        h2.play-title.title.section-title Проверим, какой из&nbsp;тебя #[span SCIE]NEER?
+        .play-body.section-text
+          p Играй в&nbsp;нашу химико-технологическую игру и&nbsp;выигрывай мерч от&nbsp;РХТУ!
+        .play-button
+          button.btn.btn-default.btn-secondary(type="button") Играть
+      .play-image
+        picture
+          source(srcset="i/play/play-image.avif, i/play/play-image@2x.avif 2x" media="(min-width: 768px)" type="image/avif")
+          source(srcset="i/play/play-image.webp, i/play/play-image@2x.webp 2x" media="(min-width: 768px)" type="image/webp")
+          source(srcset="i/play/play-image.png, i/play/play-image@2x.png 2x" media="(min-width: 768px)" type="image/png")
+          source(srcset="i/play/play-image-sm.avif, i/play/play-image-sm@2x.avif 2x" type="image/avif")
+          source(srcset="i/play/play-image-sm.webp, i/play/play-image-sm@2x.webp 2x" type="image/webp")
+          source(srcset="i/play/play-image-sm.png, i/play/play-image-sm@2x.png 2x" type="image/png")
+          img.img-fluid(src="i/play/play-image.png" alt="" loading="lazy")

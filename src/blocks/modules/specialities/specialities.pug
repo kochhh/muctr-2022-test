@@ -1,0 +1,88 @@
+section.section.section--specialities#specialities
+  .container
+    .specialities-heading(data-animation="fade-in-right")
+      h2.specialities-title.section-title.title Следуй зову#[br]сердца
+      .specialities-body.section-text
+        p Выбирай специальность будущего в&nbsp;РХТУ.
+        br
+        p Интересующие тебя темы:
+    .specialities-filter.lazybg
+      .specialities-tabs-container
+        ul.specialities-tabs
+          each item, index in [{ name: "Агропромышленность", id: "agroindustry" }, { name: "Медицина", id: "medicine" }, { name: "Биотехнологии", id: "biotechnology" }, { name: "Производство", id: "production" }, { name: "Экология и сбережение ресурсов", id: "ecology" }, { name: "Новые материалы", id: "" }, { name: "Машиностроение", id: "engineering" }, { name: "Авиация и космонавтика", id: "aviation-astronautics" }, { name: "Энергетика и нефтегазохимия", id: "energy-petrochemicals" }, { name: "Наука", id: "science" }, { name: "Атомная промышленность", id: "atomic-industry" }, { name: "Оборонная промышленность", id: "defense-industry" }, { name: "Бизнес и экономика", id: "business-economics" }, { name: "Выбрать все", id: "all-d", isAll: true }]
+            li.tabs-button(class=(item.isAll ? "d-none d-md-inline-block" : "") data-animation="fade-in-top" data-animation-delay=(index * .1).toFixed(1))
+              input.tabs-button__input(type="checkbox" id="speciality-" + item.id autocomplete="off" checked=(index === 0 ? true : false))
+              label.tabs-button__label(for="speciality-" + item.id)= item.name
+      .specialities-tabs-all.d-md-none(data-animation="fade-in-top")
+        ul.specialities-tabs
+          li.tabs-button
+            input.tabs-button__input(type="checkbox" id="speciality-all-m" autocomplete="off")
+            label.tabs-button__label(for="speciality-all-m") Выбрать все
+      .specialities-status.section-text
+        p
+          span.text-primary Установлено фильтров: 5
+        p
+          span.text-primary Отфильтровано специальностей: 5
+    .specialities-slider-container(data-animation="fade-in-top")
+      .swiper-navigation.swiper-navigation--top
+        .swiper-button-prev(data-btn-prev) #[span.arrow #[+icon("arrow")]]
+        .swiper-button-next(data-btn-next) #[span.arrow #[+icon("arrow")]]
+      .specialities-slider.swiper
+        .swiper-wrapper
+          .specialities-slide.swiper-slide
+            .specialities-slide__title.title Фундаментальная и&nbsp;прикладная химия
+            .specialities-slide__section Факультет химико-фармацевтических технологий и&nbsp;биомедицинских препаратов
+            .specialities-slide__body
+              .specialities-slide__info
+                p Код: #[strong 04.05.01]
+                p
+                  | Квалификация: #[strong Специалист]
+                  br
+                  | Форма обучения: #[strong очная]
+                  br
+                  | Бюджетных мест: #[strong 81]
+                p
+                  | Проходной балл прошлого года: #[strong 271]#[button.btn-info(type="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="bottom" data-bs-offset="0,10" data-bs-content="* — Данные о количестве мест, баллах и стоимости указаны для специальности 04.05.01 Фундаментальная и прикладная химия. Проходной балл на факультет может отличаться от проходного балла на специальность.") #[+icon("info")(width="14" height="14")]]
+                  br
+                  | Платных мест: #[strong 25]
+                  br
+                  | Стоимость обучения, руб./год: #[strong 232 900]
+                  br
+                  | (данные на&nbsp;2021/2022 учебный год)
+                .specialities-slide__button
+                  a.btn.btn-round-secondary(href="#") #[span.btn-circle] Это мое будущее! #[span.arrow #[+icon("arrow")]]
+              .specialities-slide__about
+                p Очень много часов практики и&nbsp;углубленное изучение химических дисциплин.
+                p Научно-исследовательская работа студентов ведётся на&nbsp;стыке химии, фармакологии, биохимии и&nbsp;физиологии человека, животных и&nbsp;растений. Большой выбор тематик научно-исследовательской работы и&nbsp;изучаемых дисциплин, исходя из&nbsp;твоих интересов.
+                p Выпускники работают в&nbsp;подразделениях практически всех мировых и&nbsp;российских фармпроизводителей, таких, как ROCHE, PFIZER, NOVARTIS, MERK, JOHNSON&amp;JOHNSON, ФАРМСТАНДАРТ, МОСХИМФАРМПРЕПАРАТЫ, АКРИХИН, ФАРМСИНТЕЗ, SPLAT, BIOCAD, а&nbsp;также в&nbsp;институтах Российской Академии наук.
+          .specialities-slide.swiper-slide
+            .specialities-slide__title.title Фундаментальная и&nbsp;прикладная химия
+            .specialities-slide__section Факультет химико-фармацевтических технологий и&nbsp;биомедицинских препаратов
+            .specialities-slide__body
+              .specialities-slide__info
+                p Код: #[strong 04.05.01]
+                p
+                  | Квалификация: #[strong Специалист]
+                  br
+                  | Форма обучения: #[strong очная]
+                  br
+                  | Бюджетных мест: #[strong 81]
+                p
+                  | Проходной балл прошлого года: #[strong 271]#[button.btn-info(type="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="bottom" data-bs-offset="0,10" data-bs-content="* — Данные о количестве мест, баллах и стоимости указаны для специальности 04.05.01 Фундаментальная и прикладная химия. Проходной балл на факультет может отличаться от проходного балла на специальность. Данные о количестве мест, баллах и стоимости указаны для специальности 04.05.01 Фундаментальная и прикладная химия. Проходной балл на факультет может отличаться от проходного балла на специальность.") #[+icon("info")(width="14" height="14")]]
+                  br
+                  | Платных мест: #[strong 25]
+                  br
+                  | Стоимость обучения, руб./год: #[strong 232 900]
+                  br
+                  | (данные на&nbsp;2021/2022 учебный год)
+                .specialities-slide__button
+                  a.btn.btn-round-secondary(href="#") #[span.btn-circle] Это мое будущее! #[span.arrow #[+icon("arrow")]]
+              .specialities-slide__about
+                p Очень много часов практики и&nbsp;углубленное изучение химических дисциплин.
+                p Научно-исследовательская работа студентов ведётся на&nbsp;стыке химии, фармакологии, биохимии и&nbsp;физиологии человека, животных и&nbsp;растений. Большой выбор тематик научно-исследовательской работы и&nbsp;изучаемых дисциплин, исходя из&nbsp;твоих интересов.
+                p Выпускники работают в&nbsp;подразделениях практически всех мировых и&nbsp;российских фармпроизводителей, таких, как ROCHE, PFIZER, NOVARTIS, MERK, JOHNSON&amp;JOHNSON, ФАРМСТАНДАРТ, МОСХИМФАРМПРЕПАРАТЫ, АКРИХИН, ФАРМСИНТЕЗ, SPLAT, BIOCAD, а&nbsp;также в&nbsp;институтах Российской Академии наук.
+                p Научно-исследовательская работа студентов ведётся на&nbsp;стыке химии, фармакологии, биохимии и&nbsp;физиологии человека, животных и&nbsp;растений. Большой выбор тематик научно-исследовательской работы и&nbsp;изучаемых дисциплин, исходя из&nbsp;твоих интересов.
+                p Выпускники работают в&nbsp;подразделениях практически всех мировых и&nbsp;российских фармпроизводителей, таких, как ROCHE, PFIZER, NOVARTIS, MERK, JOHNSON&amp;JOHNSON, ФАРМСТАНДАРТ, МОСХИМФАРМПРЕПАРАТЫ, АКРИХИН, ФАРМСИНТЕЗ, SPLAT, BIOCAD, а&nbsp;также в&nbsp;институтах Российской Академии наук.
+      .swiper-navigation.swiper-navigation--bottom.d-md-none
+        .swiper-button-prev(data-btn-prev) #[span.arrow #[+icon("arrow")]]
+        .swiper-button-next(data-btn-next) #[span.arrow #[+icon("arrow")]]

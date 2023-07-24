@@ -1,0 +1,15 @@
+:root, *::before, *::after {
+  --bs-gutter-x: 20px;
+}
+
+// .row {
+//   --bs-gutter-x: 20px;
+
+//   @include media-breakpoint-up(lg) {
+//     --bs-gutter-x: 30px;
+//   }
+
+//   @include media-breakpoint-up(xl) {
+//     --bs-gutter-x: 60px;
+//   }
+// }

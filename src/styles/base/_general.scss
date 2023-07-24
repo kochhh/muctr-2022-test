@@ -1,0 +1,554 @@
+@use "sass:math";
+
+body {
+  font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 359.98px) {
+    font-size: math.div(14, 360) * 100vw;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 24px;
+  }
+
+  &.menu-open {
+    overflow: hidden;
+  }
+}
+
+::-moz-selection {
+  background-color: rgba($secondary, .5);
+}
+
+::selection {
+  background-color: rgba($secondary, .5);
+}
+
+.no-customproperties {
+  body {
+    background-color: $body-bg;
+    color: $body-color;
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+  }
+
+  .row > * {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+a, button {
+  @include transition($transition-base);
+}
+
+a {
+  text-underline-offset: .2em;
+}
+
+.layout {
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+}
+
+.title {
+  font-family: "Akzidenz-Grotesk Pro Extended", $font-family-sans-serif;
+  font-weight: 700;
+
+  span {
+    color: $primary;
+  }
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 34px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 50px;
+  }
+}
+
+.section-text {
+  line-height: 1.4;
+
+  @include media-breakpoint-up(lg) {
+    line-height: 1.5;
+  }
+}
+
+.section-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: -10px;
+
+  @include media-breakpoint-up(xl) {
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-top: -30px;
+  }
+
+  .btn {
+    margin-left: 10px;
+    margin-top: 10px;
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.arrow {
+  align-items: center;
+  display: inline-flex;
+  height: 16px;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+  @include transition(transform .35s ease);
+
+  @include media-breakpoint-up(xl) {
+    height: 24px;
+  }
+
+  .icon-arrow {
+    flex-shrink: 0;
+    height: 100%;
+    width: 60px;
+  }
+}
+
+.link-arrow {
+  align-items: center;
+  display: inline-flex;
+  font-family: "Akzidenz-Grotesk Pro Extended", $font-family-sans-serif;
+  font-weight: 700;
+  vertical-align: top;
+  white-space: nowrap;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 12px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 18px;
+  }
+
+  .arrow {
+    margin-right: .7em;
+    width: 25px;
+
+    @include media-breakpoint-up(xl) {
+      width: 31px;
+    }
+  }
+}
+
+.link-more {
+  align-items: center;
+  display: inline-flex;
+  font-family: "Akzidenz-Grotesk Pro Extended", $font-family-sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  vertical-align: top;
+  white-space: nowrap;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+    height: 24px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 18px;
+  }
+
+  .arrow {
+    margin-left: .7em;
+    width: 27px;
+
+    @include media-breakpoint-up(lg) {
+      width: 52px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 56px;
+    }
+
+    .icon-arrow {
+      @include media-breakpoint-up(xl) {
+        width: 88px;
+      }
+    }
+  }
+
+  &:hover {
+    .arrow {
+      transform: translate3d(10%, 0, 0);
+    }
+  }
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.btn-close {
+  background-size: contain;
+  position: relative;
+
+  &::before, &::after {
+    background-color: $gray-900;
+    height: 2px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 125%;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.modal-dialog-mobile-offset {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  min-height: calc(100% - 10rem);
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    min-height: calc(100% - 10rem);
+  }
+}
+
+.video {
+  position: relative;
+
+  &__play {
+    border-radius: 50%;
+    height: 50px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 50px;
+    @include transition(transform .35s ease);
+
+    @include media-breakpoint-up(lg) {
+      height: 82px;
+      width: 82px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 120px;
+      width: 120px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      height: 213px;
+      width: 213px;
+    }
+
+    &::before, &::after {
+      background-repeat: no-repeat;
+      background-size: 200% 200%;
+      content: "";
+      position: absolute;
+      @include transition(background-position .35s ease);
+    }
+
+    &::before {
+      border: 4px solid $secondary;
+      border-radius: inherit;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        border-width: 6px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        border-width: 10px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        border-width: 14px;
+      }
+
+      @supports (mask-composite: exclude) {
+        background-image: linear-gradient(-135deg, #39F, #57D8D7, #CFF);
+        background-position: 100% 0;
+        border: none;
+        mask: linear-gradient(#FFF 0 0) content-box, linear-gradient(#FFF 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        padding: 4px;
+
+        @include media-breakpoint-up(lg) {
+          padding: 6px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          padding: 10px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+          padding: 14px;
+        }
+      }
+    }
+
+    &::after {
+      background-image: linear-gradient(-45deg, #39F, #57D8D7, #CFF);
+      background-position: 100% 100%;
+      height: 38%;
+      left: 50%;
+      margin-left: -19%;
+      margin-top: -19%;
+      mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='81' height='81' viewBox='0 0 81 81'><path d='m81 40.5-60.62 35v-70z'/></svg>"));
+      mask-size: contain;
+      top: 50%;
+      width: 38%;
+    }
+  }
+
+  &__link {
+    border-radius: inherit;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &:hover {
+    .video__play {
+      transform: translate3d(-50%, -50%, 0) scale(1.05);
+
+      &::before {
+        background-position: 0 100%;
+      }
+
+      &::after {
+        background-position: 0 0;
+      }
+    }
+  }
+}
+
+img.lazyload:not([src]) {
+  visibility: hidden;
+}
+
+.section-background {
+  isolation: isolate;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  @include transition(opacity .5s ease);
+
+  &::after {
+    animation: hue-rotate 4s linear infinite;
+    animation-play-state: paused;
+    background-image: linear-gradient(-135deg, #7AE7FF -15%, #BA65FD, #407EDB, #BAFDE1 115%);
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    left: 0;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .safari & {
+      display: none;
+    }
+
+    // .mobile & {
+    //   animation-play-state: running;
+    // }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    transform: scale(1.0025);
+    width: 100%;
+
+    .safari & {
+      animation: hue-rotate 4s linear infinite;
+      animation-play-state: paused;
+      opacity: .75;
+    }
+
+    // .mobile & {
+    //   animation-play-state: running;
+    // }
+  }
+
+  &:not(.images-loaded) {
+    opacity: 0;
+  }
+}
+
+.section-outer {
+  &:hover {
+    .section-background::after,
+    .faces-background::after,
+    .safari & .section-background img,
+    .safari & .faces-background img {
+      @include media-breakpoint-up(md) {
+        animation-play-state: running;
+      }
+    }
+  }
+}
+
+@keyframes hue-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.popover {
+  line-height: 1.2;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 300px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 14px;
+    line-height: 1.3;
+    max-width: 442px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    line-height: 1.4;
+  }
+}
+
+.popover-body {
+  @include media-breakpoint-up(xl) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.preloader-container {
+  display: flex;
+  height: 2em;
+  justify-content: center;
+}
+
+.preloader {
+  &, &::before, &::after {
+    animation: preloader 1s infinite ease-in-out;
+    background-color: $secondary;
+    color: $secondary;
+    height: 2em;
+    width: .4em;
+  }
+
+  & {
+    position: relative;
+    transform: translateZ(0);
+    animation-delay: -.16s;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    animation-delay: -.32s;
+    left: -.875em;
+  }
+
+  &::after {
+    left: .875em;
+  }
+}
+
+@keyframes preloader {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 2em;
+  }
+  40% {
+    box-shadow: 0 -1em;
+    height: 2.5em;
+  }
+}

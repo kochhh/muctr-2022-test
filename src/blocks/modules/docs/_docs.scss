@@ -1,0 +1,225 @@
+.section--docs {
+  padding-top: 80px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 140px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 180px;
+  }
+}
+
+.col-docs {
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 30px;
+  }
+}
+
+.docs-title {
+  @include media-breakpoint-up(lg) {
+    font-size: 34px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
+
+  &__inner {
+    display: inline-flex;
+    position: relative;
+    vertical-align: top;
+  }
+
+  &__tip {
+    align-items: center;
+    border: 6px solid $secondary;
+    border-radius: 100%;
+    color: $gray-900;
+    display: flex;
+    font-size: 14px;
+    left: 100%;
+    line-height: 1.2;
+    margin-left: 12px;
+    padding: 0 20px;
+    position: absolute;
+    text-align: center;
+    top: -36px;
+    transform: rotate(16.5deg);
+    white-space: nowrap;
+
+    @include media-breakpoint-up(md) {
+      font-size: 12px;
+      margin-left: 8px;
+      top: -30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+      margin-left: 14px;
+      padding: 2px 25px;
+      top: -21px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border-width: 12px;
+      font-size: 18px;
+      margin-left: 68px;
+      padding: 1px 31px;
+      top: -24px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 24px;
+      padding: 5px 44px;
+      top: -30px;
+    }
+  }
+}
+
+.docs-text {
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 68px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 100px;
+    max-width: 600px;
+  }
+}
+
+.docs-more {
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 60px;
+  }
+
+  .btn {
+    margin-top: 20px;
+    text-transform: none;
+  }
+}
+
+.instructions {
+  font-family: "Akzidenz-Grotesk Pro Extended", $font-family-sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.instructions-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 28px;
+    margin-bottom: 40px;
+    margin-top: 12px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+}
+
+.instructions-list {
+  counter-reset: instr;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  li {
+    counter-increment: instr;
+    min-height: 20px;
+    padding-left: 30px;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      min-height: 30px;
+      padding-left: 38px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+      min-height: 40px;
+      padding-left: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 24px;
+      min-height: 50px;
+      padding-left: 70px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 20px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &::before {
+      background-color: $primary;
+      border-radius: 50%;
+      content: counter(instr);
+      height: 20px;
+      left: 0;
+      line-height: 20px;
+      position: absolute;
+      text-align: center;
+      top: -2px;
+      width: 20px;
+
+      @include media-breakpoint-up(lg) {
+        height: 30px;
+        line-height: 30px;
+        top: -5px;
+        width: 30px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        height: 40px;
+        line-height: 40px;
+        top: -8px;
+        width: 40px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        height: 50px;
+        line-height: 50px;
+        top: -11px;
+        width: 50px;
+      }
+    }
+  }
+}

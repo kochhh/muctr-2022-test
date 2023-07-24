@@ -1,0 +1,43 @@
+section.section.section--faq#faq
+  .section-background.faq-background
+    picture
+      source(data-srcset="i/faq/faq-bg-xxl.avif" media="(min-width: 1900px)" type="image/avif")
+      source(data-srcset="i/faq/faq-bg-xxl.webp" media="(min-width: 1900px)" type="image/webp")
+      source(data-srcset="i/faq/faq-bg-xxl.jpg" media="(min-width: 1900px)" type="image/jpeg")
+      source(data-srcset="i/faq/faq-bg-xl.avif" media="(min-width: 1440px)" type="image/avif")
+      source(data-srcset="i/faq/faq-bg-xl.webp" media="(min-width: 1440px)" type="image/webp")
+      source(data-srcset="i/faq/faq-bg-xl.jpg" media="(min-width: 1440px)" type="image/jpeg")
+      source(data-srcset="i/faq/faq-bg-lg.avif" media="(min-width: 768px)" type="image/avif")
+      source(data-srcset="i/faq/faq-bg-lg.webp" media="(min-width: 768px)" type="image/webp")
+      source(data-srcset="i/faq/faq-bg-lg.jpg" media="(min-width: 768px)" type="image/jpeg")
+      source(data-srcset="i/faq/faq-bg-sm.avif" type="image/avif")
+      source(data-srcset="i/faq/faq-bg-sm.webp" type="image/webp")
+      source(data-srcset="i/faq/faq-bg-sm.jpg" type="image/jpeg")
+      img.lazyload(data-src="i/faq/faq-bg-sm.jpg" width="768" height="587" alt="" aria-hidden="true")
+  .faq-object
+    picture
+      source(data-srcset="i/faq/faq-object-xxl.avif, i/faq/faq-object-xxl@2x.avif 2x" media="(min-width: 1900px)" type="image/avif")
+      source(data-srcset="i/faq/faq-object-xxl.webp, i/faq/faq-object-xxl@2x.webp 2x" media="(min-width: 1900px)" type="image/webp")
+      source(data-srcset="i/faq/faq-object-xxl.png, i/faq/faq-object-xxl@2x.png 2x" media="(min-width: 1900px)" type="image/png")
+      source(data-srcset="i/faq/faq-object-xl.avif, i/faq/faq-object-xl@2x.avif 2x" media="(min-width: 1440px)" type="image/avif")
+      source(data-srcset="i/faq/faq-object-xl.webp, i/faq/faq-object-xl@2x.webp 2x" media="(min-width: 1440px)" type="image/webp")
+      source(data-srcset="i/faq/faq-object-xl.png, i/faq/faq-object-xl@2x.png 2x" media="(min-width: 1440px)" type="image/png")
+      source(data-srcset="i/faq/faq-object-lg.avif, i/faq/faq-object-lg@2x.avif 2x" media="(min-width: 768px)" type="image/avif")
+      source(data-srcset="i/faq/faq-object-lg.webp, i/faq/faq-object-lg@2x.webp 2x" media="(min-width: 768px)" type="image/webp")
+      source(data-srcset="i/faq/faq-object-lg.png, i/faq/faq-object-lg@2x.png 2x" media="(min-width: 768px)" type="image/png")
+      source(data-srcset="i/faq/faq-object-sm.avif, i/faq/faq-object-sm@2x.avif 2x" type="image/avif")
+      source(data-srcset="i/faq/faq-object-sm.webp, i/faq/faq-object-sm@2x.webp 2x" type="image/webp")
+      source(data-srcset="i/faq/faq-object-sm.png, i/faq/faq-object-sm@2x.png 2x" type="image/png")
+      img.lazyload(data-src="i/faq/faq-object-sm.png" width="216" height="373" alt="" aria-hidden="true" data-animation="fade-in-left")
+  .container
+    .faq-container.row
+      .col-sm-10.col-md-8.col-lg-6(data-animation="fade-in-right")
+        h2.faq-title.section-title.title Ты только#[br]спросить?
+        .faq-body.section-text Посмотри наш FAQ.#[br]Уверены, что ты найдёшь ответы на&nbsp;многие вопросы.
+        .faq-list#faq-list
+          each item, index in [{ heading: "Есть&nbsp;ли дополнительные внутренние экзамены?", text: "<p>РХТУ не&nbsp;проводит дополнительных вступительных испытаний. Но&nbsp;ты&nbsp;можешь отлично сдать ЕГЭ или выиграть всероссийские олимпиады. Все подробности смотри в&nbsp;разделе о&nbsp;документах.</p>" }, { heading: "При подаче копии документов должны быть заверены школой (печатью)? Или нужно принести в&nbsp;РХТУ и&nbsp;копии, и&nbsp;оригиналы документов для заверения подлинности?", text: "<p>Заверение копий документов не&nbsp;требуется. При личной подаче тебе надо принести только копии документов. Если примешь правильное решение поступать к&nbsp;нам по&nbsp;итогам конкурса&nbsp;&mdash; принесёшь оригинал документа об&nbsp;образовании.</p>" }, { heading: "Нужна&nbsp;ли медицинская справка при поступлении?", text: "<p>Нет, медицинская справка не&nbsp;требуется.</p>" }, { heading: "Требуется&nbsp;ли заверять копию паспорта у&nbsp;нотариуса?", text: "<p>Нет, не&nbsp;требуется.</p>" }, { heading: "Есть&nbsp;ли квота на&nbsp;поступающих БВИ (без вступительных испытаний&nbsp;&mdash; по&nbsp;результатам олимпиад)?", text: "<p>Нет, данная категория лиц не&nbsp;ограничена квотой.</p>" }, { heading: "Я&nbsp;сдал ЕГЭ ниже минимального балла подачи документов. Я&nbsp;могу поступать на&nbsp;контракт?", text: "<p>К&nbsp;сожалению, нет. Обязательным условием для участия в&nbsp;конкурсе на&nbsp;зачисление является факт получения результата ЕГЭ выше минимального балла подачи документов. В&nbsp;таких ситуациях мы&nbsp;можем предложить тебе рассмотреть другое направление подготовки или программы среднего профессионального образования в&nbsp;нашем университете (воспользуйся нашим калькулятором ЕГЭ, чтобы оценить шансы поступления на&nbsp;выбранную специальность).</p>" }, { heading: "Можно&nbsp;ли поступить в&nbsp;Высший химический колледж РАН после 9&nbsp;класса?", text: "<p>Нет. ВХК РАН является структурой на&nbsp;правах факультета. Фактически, это отдельный факультет с&nbsp;уникальной программой подготовки научных кадров. &laquo;Колледж&raquo;&nbsp;&mdash; это его историческое название.</p>" }, { heading: "Бакалавриат&nbsp;&mdash; это неоконченное высшее образование?", text: "<p>Нет, это одна из&nbsp;ступеней высшего образования. После бакалавриата уже можно идти в&nbsp;магистратуру.</p>" }]
+            .faq-item
+              .faq-item__heading(id="faq-item-" + (index + 1) + "-heading")
+                button.faq-item__button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#faq-item-" + (index + 1) + "-collapse" aria-expanded="false" aria-controls="faq-item-" + (index + 1) + "-collapse")!= item.heading
+              .faq-item__collapse.collapse(id="faq-item-" + (index + 1) + "-collapse" aria-labelledby="faq-item-" + (index + 1) + "-heading" data-bs-parent="#faq-list")
+                .faq-item__body.section-text!= item.text

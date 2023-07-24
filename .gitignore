@@ -1,6 +1,8 @@
 # Images sources
-i/_src
-i/**/_src
+src/img/_src
+src/img/**/_src
+dist/i/_src
+dist/i/**/_src
 
 # Logs
 /logs

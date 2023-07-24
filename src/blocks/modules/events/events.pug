@@ -1,0 +1,46 @@
+section.section.section--events#events
+  picture
+    source(data-srcset="i/events/events-bg.avif, i/events/events-bg@2x.avif 2x" type="image/avif")
+    source(data-srcset="i/events/events-bg.webp, i/events/events-bg@2x.webp 2x" type="image/webp")
+    source(data-srcset="i/events/events-bg.png, i/events/events-bg@2x.png 2x" type="image/png")
+    img.events-bg.lazyload(data-src="i/events/events-bg.png" alt="" aria-hidden="true")
+  .container
+    .events-container.row
+      .events-col-heading.col-md-6(data-animation="fade-in-right")
+        h2.events-title.section-title.title Лучше один раз увидеть...
+        .events-heading-text.section-text Не пропусти важные события и&nbsp;даты РХТУ
+      .events-col-buttons.col-md-6(data-animation="fade-in-left")
+        .events-bot-text.section-text Наш чат-бот напомнит тебе обо всех событиях и&nbsp;важных датах для поступления.
+        .events-bot-buttons-title Чтобы поставить напоминание и&nbsp;узнать всё, переходи в&nbsp;удобный мессенджер:
+        .events-bot-buttons.section-buttons
+          include ../../components/bots/bots
+      .events-col-main.col-lg-12
+        .events-slider-container
+          .events-slider.swiper.lazybg
+            picture
+              source(srcset="i/events/events-decor-1.webp, i/events/events-decor-1@2x.webp 2x" type="image/webp")
+              source(srcset="i/events/events-decor-1.png, i/events/events-decor-1@2x.png 2x" type="image/png")
+              img.events-decor.events-decor--1(src="i/events/events-decor-1.png" width="73" height="101" alt="" aria-hidden="true" loading="lazy" data-x="-2" data-y="-2")
+            picture
+              source(srcset="i/events/events-decor-2.webp, i/events/events-decor-2@2x.webp 2x" type="image/webp")
+              source(srcset="i/events/events-decor-2.png, i/events/events-decor-2@2x.png 2x" type="image/png")
+              img.events-decor.events-decor--2.d-none.d-md-block(src="i/events/events-decor-2.png" width="127" height="92" alt="" aria-hidden="true" loading="lazy" data-x="2" data-y="2")
+            picture
+              source(srcset="i/events/events-decor-3.webp, i/events/events-decor-3@2x.webp 2x" type="image/webp")
+              source(srcset="i/events/events-decor-3.png, i/events/events-decor-3@2x.png 2x" type="image/png")
+              img.events-decor.events-decor--3.d-none.d-md-block(src="i/events/events-decor-3.png" width="133" height="126" alt="" aria-hidden="true" loading="lazy" data-x="-3" data-y="-3")
+            picture
+              source(srcset="i/events/events-decor-4.webp, i/events/events-decor-4@2x.webp 2x" type="image/webp")
+              source(srcset="i/events/events-decor-4.png, i/events/events-decor-4@2x.png 2x" type="image/png")
+              img.events-decor.events-decor--4.d-none.d-xxl-block(src="i/events/events-decor-4.png" width="310" height="380" alt="" aria-hidden="true" loading="lazy" data-x="5" data-y="5")
+            .swiper-wrapper
+              each item, index in [{ format: "офлайн", date: "1.04", title: "Лекция профессора Иванова" }, { format: "офлайн", date: "5.04", title: "Заключительный этап Межрегиональной олимпиады школьников имени академика П.Д. Саркисова" }, { format: "офлайн", date: "13.04", title: "День открытых дверей факультета естесственных наук", isActual: true }, { format: "онлайн", date: "5.05", title: "Лекция профессора Иванова" }, { format: "офлайн", date: "5.05", title: "Лекция профессора Иванова" }]
+                .swiper-slide(data-animation="fade-in-top" data-animation-delay=(index * .2).toFixed(1))
+                  .events-slide(class=(item.isActual ? "events-slide--actual" : ""))
+                    .events-slide__bubble.lazybg
+                      .events-slide__format= item.format
+                      .events-slide__date= item.date
+                    .events-slide__title= item.title
+                    a.events-slide__link(href="#modalEvent1" role="button" aria-label="Подробнее" data-bs-toggle="modal")
+          .swiper-button-prev #[span.arrow #[+icon("arrow")]]
+          .swiper-button-next #[span.arrow #[+icon("arrow")]]

@@ -1,0 +1,34 @@
+section.section.section--help#help
+  .section-background.help-background
+    picture
+      source(data-srcset="i/help/help-bg-xxl.avif" media="(min-width: 1900px)" type="image/avif")
+      source(data-srcset="i/help/help-bg-xxl.webp" media="(min-width: 1900px)" type="image/webp")
+      source(data-srcset="i/help/help-bg-xxl.jpg" media="(min-width: 1900px)" type="image/jpeg")
+      source(data-srcset="i/help/help-bg-xl.avif" media="(min-width: 1440px)" type="image/avif")
+      source(data-srcset="i/help/help-bg-xl.webp" media="(min-width: 1440px)" type="image/webp")
+      source(data-srcset="i/help/help-bg-xl.jpg" media="(min-width: 1440px)" type="image/jpeg")
+      source(data-srcset="i/help/help-bg-lg.avif" media="(min-width: 768px)" type="image/avif")
+      source(data-srcset="i/help/help-bg-lg.webp" media="(min-width: 768px)" type="image/webp")
+      source(data-srcset="i/help/help-bg-lg.jpg" media="(min-width: 768px)" type="image/jpeg")
+      source(data-srcset="i/help/help-bg-sm.avif" type="image/avif")
+      source(data-srcset="i/help/help-bg-sm.webp" type="image/webp")
+      source(data-srcset="i/help/help-bg-sm.jpg" type="image/jpeg")
+      img.lazyload(data-src="i/help/help-bg-sm.jpg" width="768" height="800" alt="" aria-hidden="true")
+  .container
+    .help-container.row
+      .col-md-6(data-animation="fade-in-right")
+        .help-bot
+          .help-bot-title.section-title.title Не знаешь, какую специальность выбрать?
+          .help-bot-text.section-text
+            p Наш химический чат-бот поможет определиться.
+          .help-bot-buttons-title.title Выбирай удобный мессенджер и&nbsp;переходи по&nbsp;кнопке:
+          .help-bot-buttons.section-buttons
+            include ../../components/bots/bots
+      .col-md-6(data-animation="fade-in-left")
+        .help-forms
+          .help-forms-title.section-title.title Нужны другие формы подготовки?
+          .help-forms-buttons.section-buttons
+            a.btn.btn-default.btn-secondary(href="#") Аспирантура
+            a.btn.btn-default.btn-primary(href="#") Магистратура
+            a.btn.btn-default.btn-secondary.btn-long(href="#") Среднее #[span.d-xl-none(aria-hidden="true") проф.]#[span.d-none.d-xl-inline профессиональное]#[br.d-md-none] образование
+          .help-forms-buttons-tip Переходи по ссылкам

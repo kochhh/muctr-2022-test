@@ -1,0 +1,21 @@
+.modal.modal--ask.fade#modalAsk(tabindex="-1" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Закрыть")
+      .ask-heading
+        p Ты можешь подать документы самостоятельно. Для этого воспользуйся инструкциями из&nbsp;раздела #[a.text-decoration-underline.text-nowrap(href="#" target="_blank") Подача документов]
+      h4.ask-title.title Или оставь заявку на консультацию
+      form.ask-form(novalidate)
+        .form-group
+          input.form-control.is-invalid(type="text" placeholder="Введи свое ФИО*" aria-label="Введи свое ФИО*")
+          .invalid-feedback Введите имя
+        .form-group
+          input.form-control(type="tel" data-tel-input placeholder="+7 (000) 000-00-00" maxlength="18")
+        .form-group
+          textarea.form-control(rows="2" cols="80" placeholder="Твой вопрос" aria-label="Твой вопрос")
+        .form-check
+          input.form-check-input.is-invalid(type="checkbox" value="" id="agreement")
+          label.form-check-label(for="agreement") Соглашаюсь на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;#[a.text-decoration-underline(href="#") Политикой обработки персональных данных]
+          .invalid-feedback You must agree before submitting.
+        .text-center
+          button.btn.btn-round-secondary.btn-submit(type="button" data-bs-target="#modalSuccess" data-bs-toggle="modal") #[span.btn-circle] Отправить #[span.arrow #[+icon("arrow")]]

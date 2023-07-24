@@ -1,0 +1,111 @@
+.section--movie {
+  padding-top: 80px;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 20px;
+    padding-top: 100px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 140px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 30px;
+    padding-top: 180px;
+  }
+}
+
+.movie-title {
+  @include media-breakpoint-up(lg) {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 50px;
+  }
+}
+
+.movie-body {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+  }
+
+  .btn-youtube {
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 20px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-left: 40px;
+    }
+  }
+}
+
+.movie-container {
+  @include media-breakpoint-up(md) {
+    flex-direction: row-reverse;
+  }
+}
+
+.movie-content {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 34px;
+  }
+
+  .btn-round-secondary {
+    bottom: 0;
+    position: absolute;
+    right: -50px;
+    z-index: 2;
+
+    @include media-breakpoint-up(md) {
+      bottom: -36px;
+      right: -36px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      bottom: -20px;
+      right: -78px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      bottom: -34px;
+      right: 0;
+    }
+  }
+}
+
+.movie-video {
+  width: 210px;
+
+  @include media-breakpoint-up(lg) {
+    width: 308px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 426px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 560px;
+  }
+
+  .video__image {
+    border-radius: 50%;
+  }
+}

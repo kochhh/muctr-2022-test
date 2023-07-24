@@ -1,0 +1,50 @@
+block variables
+
+doctype html
+|
+|
+<html lang="ru">
+head
+  meta(charset="utf-8")
+  title #{title}
+
+  meta(name="theme-color" content="#FFFFFF")
+  meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(name="description" content="РХТУ")
+  meta(name="format-detection" content="telephone=no")
+
+  link(rel="icon" href="/favicon.ico")
+  link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+  link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+  link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+  link(rel="manifest" href="/site.webmanifest")
+
+  link(rel="preload" href="fonts/opensans-regular-webfont.woff2" crossorigin as="font" type="font/woff2")
+  link(rel="preload" href="i/hero/hero-object-sm@2x.avif" as="image" type="image/avif")
+  link(rel="stylesheet" href="css/main.css")
+
+  style.
+    .lazybg,
+    .lazybg::before,
+    .lazybg::after { background-image: none !important }
+body
+  include ../../blocks/modules/header/header
+  .layout
+    main.main
+      block content
+    include ../../blocks/modules/footer/footer
+  include ../../blocks/modules/facts/modals/modal-scieneer
+  include ../../blocks/modules/facts/modals/modal-fact-1
+  include ../../blocks/modules/facts/modals/modal-fact-2
+  include ../../blocks/modules/facts/modals/modal-fact-3
+  include ../../blocks/modules/facts/modals/modal-fact-4
+  include ../../blocks/modules/events/modals/modal-event-1
+  include ../../blocks/modules/rector/modals/modal-rector
+  include ../../blocks/modules/footer/modals/modal-ask
+  include ../../blocks/modules/footer/modals/modal-success
+  include ../../blocks/modules/calc/modals/modal-not-found
+  block scripts
+|
+|
+</html>

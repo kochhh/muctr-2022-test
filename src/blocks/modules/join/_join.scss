@@ -1,0 +1,73 @@
+@use "sass:math";
+
+.section--join {
+  padding-top: 80px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 140px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 180px;
+  }
+}
+
+.join-background {
+  left: 50%;
+  position: absolute;
+  top: 100px;
+  transform: translateX(-18%);
+  width: 350px;
+  z-index: -1;
+
+  @media (max-width: 359.98px) {
+    top: (math.div(100, 360) * 100vw);
+    width: (math.div(350, 360) * 100vw);
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 5px;
+    transform: translateX(-38%);
+    width: 960px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: -90px;
+    transform: translateX(-40%);
+    width: 1400px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    top: -40px;
+    transform: translateX(-50%);
+    width: 1900px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    top: -50px;
+    transform: translateX(-46.5%);
+    width: 2764px;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.join-title {
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 60px;
+  }
+}

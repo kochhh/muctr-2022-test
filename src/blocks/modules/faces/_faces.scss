@@ -1,0 +1,271 @@
+@use "sass:math";
+
+.section--faces {
+  padding-top: 80px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 140px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 180px;
+  }
+}
+
+.faces-background {
+  background-image: url(../i/faces/faces-tile.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  height: 1772px;
+  left: 0;
+  position: absolute;
+  top: -260px;
+  width: 100%;
+  z-index: -1;
+
+  @include media-breakpoint-up(md) {
+    height: 1200px;
+    top: -200px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 1597px;
+    top: 10px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 2105px;
+    top: -380px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    height: 2803px;
+    top: -540px;
+  }
+
+  &::after {
+    animation: hue-rotate 4s linear infinite;
+    animation-play-state: paused;
+    background-image: linear-gradient(to bottom, rgba(178, 215, 253, 0), rgba(178, 215, 253, .5) 30%, rgba(223, 182, 255, .5) 60%, rgba(223, 182, 255, 0));
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  img {
+    height: 406px;
+    left: 50%;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 330px;
+    transform: translateX(-60.5%);
+    width: 510px;
+
+    @include media-breakpoint-up(md) {
+      height: .45*1220px;
+      top: 200px;
+      transform: translateX(-80%);
+      width: .45*1555px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: .72*1220px;
+      top: -20px;
+      transform: translateX(-76%);
+      width: .72*1555px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: .84*1220px;
+      top: 450px;
+      transform: translateX(-82%);
+      width: .84*1555px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      height: 1220px;
+      top: 570px;
+      transform: translateX(-86.5%);
+      width: 1555px;
+    }
+  }
+}
+
+.faces-title {
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 34px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+.faces-slider-container {
+  margin-bottom: 30px;
+  position: relative;
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 60px;
+  }
+
+  .swiper-navigation {
+    bottom: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    // height: 32px;
+    // width: 32px;
+
+    // @include media-breakpoint-up(xl) {
+    //   height: 64px;
+    //   width: 64px;
+    // }
+
+    .arrow {
+      width: 18px;
+
+      @include media-breakpoint-up(xl) {
+        width: 26px;
+      }
+    }
+  }
+}
+
+.faces-slider {
+  overflow: visible;
+}
+
+.faces-slide {
+  border-radius: 50%;
+  width: 140px;
+
+  @include media-breakpoint-up(lg) {
+    width: 200px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 250px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 320px;
+  }
+
+  &__wrapper {
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .video__image {
+    @include transition(transform .35s ease);
+  }
+
+  .video__play {
+    height: 100%;
+    width: 100%;
+
+    &::before {
+      transform: scale(1.005);
+
+      @include media-breakpoint-up(xxl) {
+        padding: 10px;
+      }
+    }
+
+    &::after {
+      background-image: escape-svg(url("data:image/svg+xml,<svg width='102' height='102' viewBox='0 0 102 102' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M102 50.5 26.2 94.2V6.8L102 50.5Z' fill='#fff' fill-opacity='.5'/></svg>"));
+      background-position: center center;
+      background-size: contain;
+      height: 42px;
+      margin-left: 0;
+      margin-top: 0;
+      mask-image: none;
+      transform: translate3d(-50%, -50%, 0);
+      width: 42px;
+
+      @include media-breakpoint-up(lg) {
+        height: 60px;
+        width: 60px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        height: 78px;
+        width: 78px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        height: 102px;
+        width: 102px;
+      }
+    }
+  }
+
+  &:hover {
+    .video__image {
+      transform: scale(1.05);
+    }
+
+    .video__play {
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+}
+
+.become-wrapper {
+  align-items: center;
+  display: flex;
+
+  .btn-round-secondary {
+    flex-shrink: 0;
+  }
+}
+
+.become-title {
+  margin-bottom: 0;
+  margin-right: 12px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 34px;
+    margin-right: 50px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 40px;
+    margin-right: 64px;
+  }
+}

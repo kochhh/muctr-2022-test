@@ -1,0 +1,31 @@
+section.section.section--faces#faces
+  .faces-background.lazybg
+    picture
+      source(data-srcset="i/faces/faces-cloud.avif" media="(min-width: 768px)" type="image/avif")
+      source(data-srcset="i/faces/faces-cloud.webp" media="(min-width: 768px)" type="image/webp")
+      source(data-srcset="i/faces/faces-cloud.jpg" media="(min-width: 768px)" type="image/jpeg")
+      source(data-srcset="i/faces/faces-cloud-sm.avif" type="image/avif")
+      source(data-srcset="i/faces/faces-cloud-sm.webp" type="image/webp")
+      source(data-srcset="i/faces/faces-cloud-sm.jpg" type="image/jpeg")
+      img.lazyload(data-src="i/faces/faces-cloud.jpg" alt="" aria-hidden="true")
+  .container
+    .faces-container
+      h2.faces-title.section-title.title(data-animation="fade-in-right") Посмотри#[br]на эти лица
+      .faces-slider-container
+        .faces-slider.swiper
+          .swiper-wrapper
+            each item, index in [1027, 64, 669, 1074, 237, 433]
+              .faces-slide.swiper-slide.video(data-animation="fade-in-top" data-animation-delay=(index * .2).toFixed(1))
+                .faces-slide__wrapper
+                  img.video__image.img-fluid(src="https://picsum.photos/id/" + item + "/320/320" width="320" height="320" alt="" loading="lazy")
+                  .swiper-lazy-preloader
+                span.video__play
+                a.video__link.glightbox(href="https://www.youtube.com/embed/tk9aquUFf90" data-gallery="faces" aria-label="Смотреть видео")
+        .swiper-navigation
+          .swiper-button-prev #[span.arrow #[+icon("arrow")]]
+          .swiper-button-next #[span.arrow #[+icon("arrow")]]
+    .become-container.row(data-animation="fade-in-left")
+      .col-md-8.offset-md-4.col-xl-7.offset-xl-5
+        .become-wrapper
+          .become-title.section-title.title Стань#[br]лицом РХТУ
+          a.btn.btn-round-secondary(href="#") #[span.btn-circle] Поступить #[span.arrow #[+icon("arrow")]]

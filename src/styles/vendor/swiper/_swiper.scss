@@ -1,0 +1,81 @@
+$themeColor: $primary;
+
+@import "../../../../swiper/src/core/core";
+@import "../../../../swiper/src/modules/a11y/a11y";
+@import "../../../../swiper/src/modules/effect-fade/effect-fade";
+
+.swiper-navigation {
+  display: flex;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  color: $gray-900;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+  @include transition(all .35s ease);
+
+  @include media-breakpoint-up(md) {
+    height: 40px;
+    width: 40px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 48px;
+    width: 48px;
+  }
+
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+
+    .arrow {
+      transform: translate3d(10%, 0, 0);
+    }
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #8B2DD4;
+    border-color: #8B2DD4;
+  }
+}
+
+.swiper-button-prev {
+  .arrow {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    .arrow {
+      transform: rotate(180deg) translate3d(10%, 0, 0);
+    }
+  }
+}
+
+.swiper-button-next {
+  margin-left: 10px;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 20px;
+  }
+}
+
+.swiper-button-disabled {
+  background-color: #C4C4C4;
+  border-color: #C4C4C4;
+  cursor: default;
+  opacity: .4;
+  pointer-events: none;
+}

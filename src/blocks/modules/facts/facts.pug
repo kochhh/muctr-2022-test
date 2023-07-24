@@ -1,0 +1,39 @@
+section.section.section--facts#facts
+  .container
+    .facts-container.row
+      .col-md-6(data-animation="fade-in-right")
+        h2.facts-title.section-title.title Ведущий #[span химико-технологический вуз], который задаёт тренды
+        .scieneer
+          .scieneer-text Только мы готовим специалистов нового уровня
+          .scieneer-button
+            button.btn.btn-default.btn-secondary.btn-scieneer(type="button" data-bs-toggle="modal" data-bs-target="#modalScieneer") #[span Scie]neer
+      .col-md-6.col-xxl-5.offset-xxl-1(data-animation="fade-in-left")
+        .facts-slider-container
+          .facts-slider-wrapper
+            .facts-slider.swiper
+              .swiper-wrapper
+                each item, index in ["Университет с&nbsp;вековой историей", "Более 600&nbsp;млн руб. инвестиций в&nbsp;год", "Образование ради результатов, а&nbsp;не&nbsp;«для галочки»", "Практика и&nbsp;разработки, а&nbsp;не&nbsp;сухая теория"]
+                  .facts-slide.swiper-slide
+                    .facts-slide__title.title!= item
+                    button.facts-slide__button.lazybg(type="button" aria-label="Что это значит для меня?" data-bs-toggle="modal" data-bs-target="#modalFact" + (index + 1))
+            .swiper-controls
+              .swiper-pagination
+              .swiper-navigation
+                .swiper-button-prev #[span.arrow #[+icon("arrow")]]
+                .swiper-button-next #[span.arrow #[+icon("arrow")]]
+    .facts-stats
+      .facts-stats-item(data-animation="fade-in-top")
+        .facts-stats-item__value
+          span.facts-stats-item__value-helper(aria-hidden="true") 4444
+          span.facts-stats-item__value-real 8844
+        .facts-stats-item__text студентов
+      .facts-stats-item(data-animation="fade-in-top" data-animation-delay=".2")
+        .facts-stats-item__value
+          span.facts-stats-item__value-helper(aria-hidden="true") 44
+          span.facts-stats-item__value-real 65
+        .facts-stats-item__text профессий#[br.d-none.d-sm-inline] будущего
+      .facts-stats-item(data-animation="fade-in-top" data-animation-delay=".4")
+        .facts-stats-item__value
+          span.facts-stats-item__value-helper(aria-hidden="true") 4444
+          span.facts-stats-item__value-real 1541
+        .facts-stats-item__text бюджетное место#[br.d-none.d-sm-inline] в 2022 г.

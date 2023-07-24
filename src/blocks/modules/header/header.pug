@@ -1,0 +1,21 @@
+nav.navbar.fixed-top#navbar
+  .container
+    .navbar-container
+      a.brand(href="/")
+        img.brand__logo(src="i/logo.svg" alt="РХТУ")
+        h1.brand__title #[strong Российский химико-технологический университет]#[br]имени Д.И. Менделеева
+      button.navbar-toggler.collapsed.d-xl-none(type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Открыть меню")
+      .navbar-collapse.collapse#navigation
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href="#specialities" data-scroll) Выбор специальности
+          li.nav-item
+            a.nav-link(href="#events" data-scroll) Календарь событий
+          li.nav-item
+            a.nav-link(href="#docs" data-scroll) Подача документов
+          li.nav-item
+            a.nav-link(href="#faces" data-scroll) Отзывы
+          li.nav-item
+            a.nav-link(href="#faq" data-scroll) FAQ
+          li.nav-item
+            a.nav-link(href="#modalAsk" role="button" data-bs-toggle="modal") Обратная связь

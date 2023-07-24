@@ -1,0 +1,17 @@
+section.section.section--movie#movie
+  .container
+    .movie-container.row.align-items-center
+      .col-md-7.offset-md-1(data-animation="fade-in-left")
+        h2.movie-title.section-title.title Наши студенты даже сняли фантастический блокбастер про вуз — «Альтернативная теория»
+        .movie-body.section-text
+          p Крутой, кстати, фильм. Посмотри на#[br.d-lg-none]#[a.btn.btn-default.btn-icon.btn-youtube(href="#") нашем канале #[span.icon.icon-youtube]]
+      .col-md-4(data-animation="fade-in-right")
+        .movie-content
+          .video.movie-video
+            picture
+              source(srcset="i/movie/movie-preview.avif" type="image/avif")
+              source(srcset="i/movie/movie-preview.webp" type="image/webp")
+              img.video__image.img-fluid(src="i/movie/movie-preview.jpg" width="560" height="560" alt="" loading="lazy")
+            span.video__play
+            a.video__link.glightbox(href="https://vk.com/video_ext.php?oid=692690141&id=456239019&hash=f98152de861a79fc&hd=2" data-width="325px" data-height="646px" data-gallery="movie" aria-label="Смотреть видео")
+          a.btn.btn-round-secondary(href="#") #[span.btn-circle] Несу документы! #[span.arrow #[+icon("arrow")]]

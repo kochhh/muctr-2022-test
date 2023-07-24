@@ -1,0 +1,6 @@
+[submodule "swiper"]
+	path = swiper
+	url = https://github.com/nolimits4web/swiper
+[submodule "bootstrap"]
+	path = bootstrap
+	url = https://github.com/twbs/bootstrap

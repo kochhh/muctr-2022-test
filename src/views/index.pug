@@ -1,0 +1,31 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+  - var title = "РХТУ";
+
+block scripts
+  script(src="js/libs.js")
+  script(src="js/main.js")
+
+block content
+  .section-outer
+    include ../blocks/modules/hero/hero
+    include ../blocks/modules/facts/facts
+  .section-outer
+    include ../blocks/modules/join/join
+    include ../blocks/modules/specialities/specialities
+  .section-outer
+    include ../blocks/modules/help/help
+    include ../blocks/modules/calc/calc
+    include ../blocks/modules/events/events
+  .section-outer
+    include ../blocks/modules/docs/docs
+    include ../blocks/modules/play/play
+    include ../blocks/modules/activities/activities
+    include ../blocks/modules/movie/movie
+  .section-outer
+    include ../blocks/modules/faces/faces
+    include ../blocks/modules/rector/rector
+  .section-outer
+    include ../blocks/modules/faq/faq
