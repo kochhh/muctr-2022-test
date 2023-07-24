@@ -9,7 +9,7 @@ const Facts = {
     }
 
     new Swiper(facts, {
-      cpeed: 500,
+      speed: 500,
       loop: true,
       effect: 'creative',
       creativeEffect: {

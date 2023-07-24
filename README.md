@@ -24,6 +24,7 @@ npm run build
 ### Build custom Swiper
 * Install Swiper as a git submodule: ```git submodule add https://github.com/nolimits4web/swiper``` (from root path)
 * Go to folder: ```cd swiper```
+* Checkout the latest 8 release: ```git checkout d68a71bea14361010ef201b15359ed6a64c37f4c```
 * Make ```npm i```
 * Comment out unneeded options in ```swiper/scripts/build-config.js```, save
 * Compile bundle ```npm run build:prod```
@@ -31,7 +32,7 @@ npm run build
 ### Build custom Bootstrap
 * Install Bootstrap as a git submodule: ```git submodule add https://github.com/twbs/bootstrap``` (from root path)
 * Go to folder: ```cd bootstrap```
-* Checkout the 5.1.3 release: ```git checkout 1a6fdfae6be09b09eaced8f0e442ca6f7680a61e```
+* Checkout the latest 5 release: ```git checkout 1a6fdfae6be09b09eaced8f0e442ca6f7680a61e```
 * Make ```npm i```
 * Comment out unneeded exports in ```bootstrap/js/index.umd.js```, save
 * Compile and minify bundle ```npm run js-compile-bundle && npm run js-minify-bundle```

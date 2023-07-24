@@ -19,7 +19,7 @@
     const Animations = {
         init() {
             // On-scroll animations
-            if (typeof gsap === 'undefined') return;
+            if (typeof gsap == 'undefined') return;
             gsap.registerPlugin(ScrollTrigger);
             gsap.utils.toArray('[data-animation="fade-in-right"]').forEach(function(item) {
                 const delay = +item.getAttribute('data-animation-delay');
@@ -365,7 +365,7 @@
                 return;
             }
             new Swiper(facts, {
-                cpeed: 500,
+                speed: 500,
                 loop: true,
                 effect: 'creative',
                 creativeEffect: {
@@ -483,7 +483,6 @@
             new Swiper(faces, {
                 speed: 400,
                 slidesPerView: 'auto',
-                lazy: true,
                 navigation: {
                     prevEl: facesContainer.querySelector('.swiper-button-prev'),
                     nextEl: facesContainer.querySelector('.swiper-button-next')

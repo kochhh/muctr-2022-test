@@ -2,7 +2,7 @@
 const Animations = {
   init() {
     // On-scroll animations
-    if (typeof gsap === 'undefined') return
+    if (typeof gsap == 'undefined') return
 
     gsap.registerPlugin(ScrollTrigger)
 
