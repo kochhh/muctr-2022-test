@@ -48,6 +48,9 @@ const Hero = {
           mousewheel: true,
           initialSlide: 2,
           speed: 500,
+          autoplay: {
+            delay: 3000,
+          },
           navigation: {
             prevEl: specialitiesContainer.querySelector('.swiper-button-prev'),
             nextEl: specialitiesContainer.querySelector('.swiper-button-next'),
@@ -66,9 +69,6 @@ const Hero = {
               spaceBetween: 64,
             },
           },
-          // autoplay: {
-          //   delay: 3000,
-          // },
         })
       }
 

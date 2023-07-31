@@ -24,6 +24,7 @@ npm run build
 ### Build custom Swiper
 * Install Swiper as a git submodule: ```git submodule add https://github.com/nolimits4web/swiper``` (from root path)
 * Go to folder: ```cd swiper```
+* Checkout the latest 8 release: ```git checkout d68a71bea14361010ef201b15359ed6a64c37f4c```
 * Make ```npm i```
 * Comment out unneeded options in ```swiper/scripts/build-config.js```, save
 * Compile bundle ```npm run build:prod```
