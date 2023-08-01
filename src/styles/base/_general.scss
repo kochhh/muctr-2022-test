@@ -34,21 +34,6 @@ body {
   background-color: rgba($secondary, .5);
 }
 
-.no-customproperties {
-  body {
-    background-color: $body-bg;
-    color: $body-color;
-    font-family: $font-family-sans-serif;
-    font-weight: $font-weight-base;
-    line-height: $line-height-base;
-  }
-
-  .row > * {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
 a, button {
   @include transition($transition-base);
 }

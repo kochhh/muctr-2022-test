@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build --production",
-    "serve": "npm run build && gulp serve"
+    "serve": "gulp build --production && gulp serve"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
