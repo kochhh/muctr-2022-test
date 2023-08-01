@@ -8,7 +8,8 @@ $themeColor: $primary;
   display: flex;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   align-items: center;
   background-color: transparent;
   border: 2px solid currentColor;
@@ -19,6 +20,7 @@ $themeColor: $primary;
   flex-shrink: 0;
   height: 32px;
   justify-content: center;
+  user-select: none;
   width: 32px;
   @include transition(all .35s ease);
 

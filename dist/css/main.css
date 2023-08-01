@@ -1311,6 +1311,9 @@ textarea.form-control {
   flex-shrink: 0;
   height: 32px;
   justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   width: 32px;
   transition: all 0.35s ease;
 }
