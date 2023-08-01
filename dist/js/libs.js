@@ -1161,7 +1161,7 @@ document.addEventListener("DOMContentLoaded", function () {
               listener,
               proxyListener: handleEvent
             });
-            el.addEventListener(event, handleEvent, capture);
+            el.addEventListener(event, handleEvent, { passive: true });
           }
         } else {
           // Live events
@@ -1173,7 +1173,7 @@ document.addEventListener("DOMContentLoaded", function () {
               listener,
               proxyListener: handleLiveEvent
             });
-            el.addEventListener(event, handleLiveEvent, capture);
+            el.addEventListener(event, handleLiveEvent, { passive: true });
           }
         }
       }
@@ -1214,13 +1214,13 @@ document.addEventListener("DOMContentLoaded", function () {
               const handler = handlers[k];
 
               if (listener && handler.listener === listener) {
-                el.removeEventListener(event, handler.proxyListener, capture);
+                el.removeEventListener(event, handler.proxyListener, { passive: true });
                 handlers.splice(k, 1);
               } else if (listener && handler.listener && handler.listener.dom7proxy && handler.listener.dom7proxy === listener) {
-                el.removeEventListener(event, handler.proxyListener, capture);
+                el.removeEventListener(event, handler.proxyListener, { passive: true });
                 handlers.splice(k, 1);
               } else if (!listener) {
-                el.removeEventListener(event, handler.proxyListener, capture);
+                el.removeEventListener(event, handler.proxyListener, { passive: true });
                 handlers.splice(k, 1);
               }
             }
